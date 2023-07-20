@@ -8,7 +8,8 @@ import Banner from './components/Banner';
 const colors = {
   text: {
     100: '#fff',
-    600: '#6B46C1'
+    600: '#6B46C1',
+    400: '#48BB78',
   },
 }
 
@@ -21,11 +22,10 @@ const theme = extendTheme({ colors, styles })
 
 function App() {
 
-
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Banner/>
+      <Banner />
     </ChakraProvider>
   );
 }
