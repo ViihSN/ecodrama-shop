@@ -1,10 +1,13 @@
+//Chakra UI
 import { ChakraProvider } from '@chakra-ui/react';
-import Header from './components/Header';
 import { extendTheme } from '@chakra-ui/react';
+//Components
+import Nav from "./components/Nav";
 import Banner from './components/Banner';
+import Produtos from "./components/Produtos";
+import Header from "./components/Header";
 
-
-// Posso criar do jeito que eu quiser
+// Cores padrão
 const colors = {
   text: {
     100: '#fff',
@@ -13,19 +16,18 @@ const colors = {
   },
 }
 
-// cores seguindo o padrao chakra UI
-const styles = {
 
-}
+const theme = extendTheme({ colors })
 
-const theme = extendTheme({ colors, styles })
 
 function App() {
 
   return (
     <ChakraProvider theme={theme}>
+      <Nav />
       <Header />
       <Banner />
+      <Produtos />
     </ChakraProvider>
   );
 }
