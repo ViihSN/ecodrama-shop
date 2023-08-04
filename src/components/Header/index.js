@@ -1,10 +1,11 @@
 import { useState } from 'react';
 //Chakra UI
-import { Box, Flex, Input, InputGroup, InputLeftElement, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, Flex, Input, InputGroup, InputLeftElement, ListItem, UnorderedList, Image } from '@chakra-ui/react';
 //React Icons
 import { AiOutlineSearch, AiFillHeart, AiOutlineUser } from 'react-icons/ai';
 import { BiCart } from 'react-icons/bi';
-
+//Logo
+import Logo from '../Header/nova-logo.png';
 //Framer Motion
 import { motion } from 'framer-motion';
 //----------------------------------//
@@ -43,7 +44,7 @@ function Header() {
         color="#000"
         fontSize="15px"
         fontWeight={500}
-        
+
         mt="15px"
       >
         <ListItem
@@ -68,24 +69,21 @@ function Header() {
           Sobre Nós
         </ListItem>
         <ListItem
-          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', textShadow: '3px 3px 3px' }}
+          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', color: '#000' }}
           cursor="pointer"
           mx={4}
         >
           Contatos
         </ListItem>
       </UnorderedList>
-      <Box
-        fontSize="2.5rem"
-        fontWeight={700}
-        textShadow="3px 3px 3px"
-        color="#889d82"
-        fontFamily="Cookie"
+      <Flex
+        w="250px"
+        display="flex"
+        justifyContent="center"
+        alignItens="center"
       >
-        <a className="navbar-brand fw-bold fs-4" href="#">
-          K-drama Shop
-        </a>
-      </Box>
+        <Image src={Logo} alt="logo" />
+      </Flex>
       <Flex direction="row" gap={5} color="#000">
         <BiCart cursor="pointer" size="23px" />
         <AiFillHeart cursor="pointer" size="23px" />
