@@ -1,0 +1,35 @@
+body {
+  overflow-x: hidden;
+}
+
+/* STYLE TRANSITION DO COMPONENTE INFO */
+
+.frase-container {
+    width: 100%;
+    animation: animateFrase 15s linear infinite;
+  }
+  
+  @keyframes animateFrase {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Style do componente Header referente ao hover dos items do header */
+
+  .hover-container {
+    position: relative;
+  }
+  
+  .hover-line {
+    margin-top: -1em;
+    width: 100%;
+    height: 2px; /* Altura da linha */
+    background-color: #000; /* Cor da linha */
+    transition: transform 0.5s ease; /* Velocidade da transição */
+    transform: scaleX(0); /* Inicialmente, a linha estará invisível */
+  }
+  
+  .hover-text:hover + .hover-line {
+    transform: scaleX(1); /* Ao passar o mouse no texto, a linha se move para a direita */
+  }

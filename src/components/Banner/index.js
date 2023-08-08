@@ -55,7 +55,7 @@ function Banner() {
                     Camisas Exclusivas
                   </span>
                   <span class="d-info mt-5">
-                    <Button colorScheme='blackAlpha' size='lg'>Comprar</Button>
+                    <Button bg='#000' color="#fff" size='lg'>Comprar</Button>
                   </span>
                 </div>
                 <Box>
@@ -73,7 +73,7 @@ function Banner() {
                     Quadros Personalisados
                   </span>
                   <span class="d-info mt-5">
-                    <Button colorScheme='blackAlpha' size='lg'>Comprar</Button>
+                    <Button bg='#000' color="#fff" size='lg'>Comprar</Button>
                   </span>
                 </div>
                 <Box>

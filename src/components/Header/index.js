@@ -1,11 +1,11 @@
 import { useState } from 'react';
 //Chakra UI
-import { Box, Flex, Input, InputGroup, InputLeftElement, ListItem, UnorderedList, Image } from '@chakra-ui/react';
+import { Box, Flex, Input, InputGroup, InputLeftElement, ListItem, UnorderedList, Image, Center, List } from '@chakra-ui/react';
 //React Icons
 import { AiOutlineSearch, AiFillHeart, AiOutlineUser } from 'react-icons/ai';
 import { BiCart } from 'react-icons/bi';
 //Logo
-import Logo from '../Header/nova-logo.png';
+import Logo from '../Header/nova-logo3.png';
 //Framer Motion
 import { motion } from 'framer-motion';
 //----------------------------------//
@@ -14,7 +14,7 @@ function Header() {
   const [isSearchMode, setIsSearchMode] = useState(false);
 
   const handleSearchIconClick = () => {
-    setIsSearchMode(true);
+    setIsSearchMode(!isSearchMode);
   };
 
   const inputVariants = {
@@ -25,15 +25,13 @@ function Header() {
   return (
     <Box
       w="100%"
-      top={0}
-      right={0}
-      zIndex={999}
       display="flex"
       justifyContent="space-around"
       alignItems="center"
       transition="0.5s linear"
       background="#fff"
       boxShadow=" 0 2px 4px rgba(250, 250, 250, 0.678)"
+      h="75px"
       maxH={95}
     >
       <UnorderedList
@@ -48,41 +46,48 @@ function Header() {
         mt="15px"
       >
         <ListItem
-          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', textShadow: '3px 3px 3px' }}
+          className="hover-container"
           cursor="pointer"
           mx={4}
+          mt="8px"
         >
-          Home
+          <p className="hover-text">Início</p>
+          <div className="hover-line"></div>
         </ListItem>
         <ListItem
-          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', textShadow: '3px 3px 3px' }}
           cursor="pointer"
           mx={4}
+          mt="8px"
+          className="hover-container"
         >
-          Produtos
+          <p className="hover-text">Produtos</p>
+          <div className="hover-line"></div>
         </ListItem>
         <ListItem
-          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', textShadow: '3px 3px 3px' }}
+          className="hover-container"
           cursor="pointer"
           mx={4}
+          mt="8px"
         >
-          Sobre Nós
+          <p className="hover-text">Sobre nós</p>
+          <div className="hover-line"></div>
         </ListItem>
         <ListItem
-          _hover={{ transform: 'scale(1.2)', transition: 'transform .5s', color: '#000' }}
+          mt="8px"
+          className="hover-container"
           cursor="pointer"
           mx={4}
+          mt="8px"
         >
-          Contatos
+          <p className="hover-text">Contatos</p>
+          <div className="hover-line"></div>
         </ListItem>
       </UnorderedList>
       <Flex
-        w="250px"
-        display="flex"
-        justifyContent="center"
-        alignItens="center"
       >
-        <Image src={Logo} alt="logo" />
+        <Center>
+          <Image src={Logo} h="50px" alt="logo" />
+        </Center>
       </Flex>
       <Flex direction="row" gap={5} color="#000">
         <BiCart cursor="pointer" size="23px" />
