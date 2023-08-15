@@ -12,7 +12,7 @@ const Nav = () => {
     { id: 5, message: "FRETE GRÁTIS PARA O MUNDO TODO" },
     { id: 6, message: "FRETE GRÁTIS PARA O MUNDO TODO" },
     { id: 7, message: "FRETE GRÁTIS PARA O MUNDO TODO" },
-    // Adicione mais objetos aqui se necessário
+    
   ];
 
   return (
@@ -28,7 +28,7 @@ const Nav = () => {
       background="#ffe5da"
     >
       <Flex
-        className="frase-container"  // Adiciona a classe aqui
+        className="frase-container"  
         alignItems="center"
         maxH={95}
         gap={15}

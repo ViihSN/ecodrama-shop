@@ -1,21 +1,17 @@
 
 //Chakra UI
-import { Box, Button, Image } from '@chakra-ui/react';
-//Video Principal
-import Video1 from "../../components/Banner/videos/video1.mp4";
-import Video2 from "../../components/Banner/videos/video2.mp4";
-import Video3 from "../../components/Banner/videos/video3.mp4";
-import imagem1 from "../../components/Banner/img/caneca-vicenzo-removebg-preview.png";
+import { Box, Button, Image, Flex } from '@chakra-ui/react';
+//imagens principal
+import imagem1 from "../../components/Banner/img/caneca.png";
 import imagem2 from "../../components/Banner/img/camisa-removebg-preview.png";
-import imagem3 from "../../components/Banner/img/quadro-removebg-preview.png";
-//Css
-import './style.css';
+import imagem3 from "../../components/Banner/img/almofada-goblin.png";
+
 
 function Banner() {
 
   return (
     <>
-      <Box className="hero w-100 h-100">
+      <Box className="hero w-100 h-100" w="100%" h="100vh">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" autoPlay >
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators"
@@ -37,12 +33,12 @@ function Banner() {
                     Canecas Personalizadas
                   </span>
                   <span class="d-info mt-5">
-                    <Button bg='#000' color="#fff" size='lg'>Comprar</Button>
+                    <div className="button"></div>
                   </span>
                 </div>
-                <Box>
+                <Flex>
                   <Image src={imagem1} w="500px" />
-                </Box>
+                </Flex>
               </div>
             </div>
             <div class="carousel-item">
@@ -51,15 +47,15 @@ function Banner() {
                   <span class="text-white title mb-3 fw-bold">
                     K-drama Shop
                   </span>
-                  <span class="discription">
+                  <span class="discription" >
                     Camisas Exclusivas
                   </span>
                   <span class="d-info mt-5">
-                    <Button bg='#000' color="#fff" size='lg'>Comprar</Button>
+                    <div className="button"></div>
                   </span>
                 </div>
                 <Box>
-                  <Image src={imagem2} w="350px" />
+                  <Image src={imagem2} w="352px" />
                 </Box>
               </div>
             </div>
@@ -70,10 +66,10 @@ function Banner() {
                     K-drama Shop
                   </span>
                   <span class="discription">
-                    Quadros Personalisados
+                    Almofadas Personalisadas
                   </span>
                   <span class="d-info mt-5">
-                    <Button bg='#000' color="#fff" size='lg'>Comprar</Button>
+                    <div className="button"></div>
                   </span>
                 </div>
                 <Box>
@@ -96,6 +92,7 @@ function Banner() {
           </button>
         </div>
       </Box >
+      
     </>
   );
 }

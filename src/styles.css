@@ -5,31 +5,130 @@ body {
 /* STYLE TRANSITION DO COMPONENTE INFO */
 
 .frase-container {
-    width: 100%;
-    animation: animateFrase 15s linear infinite;
-  }
-  
-  @keyframes animateFrase {
-    0% {
-      transform: translateX(-100%);
-    }
-  }
+  width: 100%;
+  animation: animateFrase 15s linear infinite;
+}
 
-  /* Style do componente Header referente ao hover dos items do header */
+@keyframes animateFrase {
+  0% {
+    transform: translateX(-100%);
+  }
+}
 
-  .hover-container {
-    position: relative;
-  }
-  
-  .hover-line {
-    margin-top: -1em;
-    width: 100%;
-    height: 2px; /* Altura da linha */
-    background-color: #000; /* Cor da linha */
-    transition: transform 0.5s ease; /* Velocidade da transição */
-    transform: scaleX(0); /* Inicialmente, a linha estará invisível */
-  }
-  
-  .hover-text:hover + .hover-line {
-    transform: scaleX(1); /* Ao passar o mouse no texto, a linha se move para a direita */
-  }
+/* STYLE DO COMPONENTE HEADER : REFERENTE AO HOVER DOS ITENS DO MENUS */
+
+.hover-container {
+  position: relative;
+}
+
+.hover-line {
+  margin-top: -1em;
+  width: 100%;
+  height: 2px;
+  /* Altura da linha */
+  background-color: #000;
+  /* Cor da linha */
+  transition: transform 0.5s ease;
+  /* Velocidade da transição */
+  transform: scaleX(0);
+  /* Inicialmente, a linha estará invisível */
+}
+
+.hover-text:hover+.hover-line {
+  transform: scaleX(1);
+  /* Ao passar o mouse no texto, a linha se move para a direita */
+}
+
+/* STYLE DO COMPONENTE BANNER*/
+
+.title {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: rgb(255, 255, 255);
+  outline: none;
+  text-align: center;
+}
+
+.discription {
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.d-info {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.carousel-inner {
+  background-color: #734c0c50;
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 130px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::before {
+  content: "Comprar";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: #fff;
+  color: #000;
+  transform: translate(0%, 90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::after {
+  content: "Conferir";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%, -100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+  transform: translate(0%, 0%);
+}
+
+.button:hover::after {
+  transform: translate(0%, -200%);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  scale: 0.95;
+}
+
+/* STYLE DO COMPONENTE PRODUTOS*/
